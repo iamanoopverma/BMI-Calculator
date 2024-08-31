@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="inputArea">
+           <form action="">
+            <h1 id="heading1">BMI Calculator</h1>
+            <div id="form">
+              <div class="rows">
+                 <label for="">Age</label>
+                 <input type="number" id="age" oninput="validation()" required>
+               </div>
+               <div class="rows" id="gender">
+                 <label for="" class="gender">Gender</label>
+                 <input type="radio" required name="gender" value="Male" oninput="validation()" required>
+                 <label for="" class="gender">Male</label>
+                 <input type="radio" required name="gender" value="Female" oninput="validation()" required>
+                 <label for="" class="gender">Female</label>
+                </div>
+               <div class="rows">
+                 <label for="">Height(CM)</label>
+                 <input type="number" required id="height" oninput="validation()" required>
+                </div>
+               <div class="rows">
+                 <label for="">Weight(KG)</label>
+                 <input type="number" required id="weight" oninput="validation()" required>
+               </div>
+               <div class="rows">
+                   <input type="button" value="Calculate" id="submitButton" onclick="bmiCalculation()"></input>
+                    <input type="reset" value="reset">
+               </div>
+            </div>
+          </form>
+       </div>
+       <div id="resultArea">
+          <h2 id="heading2">Result</h2>
+          <div id="range"></div>
+          <p id="instruction"></p>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
